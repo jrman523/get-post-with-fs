@@ -20,13 +20,4 @@ $("#send").on("click", function () {
 //   data: profile,
 // });
 
-// $.get("/api/result").then(function () {
-//   console.log(data);
-// });
 
-// $.ajax({
-//   method: "GET",
-//   url: "/api/result"
-// }).then(function(data){
-// console.log(data);
-//});

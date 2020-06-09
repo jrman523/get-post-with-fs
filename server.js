@@ -26,22 +26,12 @@ app.post("/api/test", function (req, res) {
   res.send(req.body);
 });
 
-app.post("/api/test", function (req, res) {
-  fs.writeFile("./data/player1.json", JSON.stringify(req.body), "utf8", function (err) {
-    if (err) {
-      throw err;
-    }
-    console.log("saved");
-  });
-  res.send(req.body);
-});
-
 app.get("/api/result", function (req, res) {
   fs.readFile("./data/player1.json", "utf8", function (err, data) {
     if (err) {
       throw err;
     }
-    let array = [{ name: "jad", age: 20 }, JSON.parse(data)];
+    let array = { player: { name: "jad", age: 20 }, player2: JSON.parse(data) };
     res.json(array);
   });
   console.log();
